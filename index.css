@@ -18,7 +18,7 @@ html, body {
 
 
 #header{
-    padding: 4rem 7rem 1rem 7rem ;
+    padding: 4rem 7rem 3rem 7rem ;
     font-size: 2rem;
     color: white;
     background-color: black;
@@ -37,16 +37,15 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90vw;
-    height: 100%;
+    width: 60vw;
     margin: 0;
     color: #DFDDDD;
     padding-top: 5%;
 }
 
-#feed img{
+/* #feed img{
     width: 10%;
-}
+} */
 
 #header a{
     color: white;
@@ -65,7 +64,7 @@ html, body {
 
 form.searchForm input[type=text]{
     width: 80%;
-    height: 7vh;
+    height: 100%;
     margin: 0px;
     border-radius: 5px 0px 0px 5px;
     border: 1px solid #D1D5DB;
@@ -73,11 +72,12 @@ form.searchForm input[type=text]{
     padding-left: 1rem;
     color: #6B7280;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 form.searchForm button{
     width: 20%;
-    height: 7vh;
+    height: 100%;
     margin: 0px;
     border-radius: 0px 5px 5px 0px;
     border: 1px solid #D1D5DB;
@@ -85,4 +85,97 @@ form.searchForm button{
     font-weight: 500;
     font-size: 0.9rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+form.searchForm button:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+form.searchForm button::after{
+    background-color: red;
+    cursor: pointer;
+}
+
+.init-state{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*MOVIE CARD*/
+ .movie_card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
+    border-bottom: 3px solid #DEDEDE;
+    width: 100%;
+    background-color: white; /* for testing*/
+    padding-bottom: 2em;
+}
+
+.movie-poster{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+} 
+
+.movie-poster img{
+  width: 10vw;
+  height: 32vh;
+}
+
+.movie-description{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.title-rating, .rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.title-rating{
+    gap: 5%;
+    color: black;
+}
+
+.rating{
+    gap:20%;
+}
+
+.rating img{
+    width: 30%;
+    height: 30%;
+}
+
+.movie-details-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: black;
+}
+
+.movie-plot{
+    color: gray;
+}
+
+.watchlist-func{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.watchlist-func img{
+    width: 12%;
+    height: 30%;
 }

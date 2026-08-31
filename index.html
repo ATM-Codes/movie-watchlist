@@ -1,5 +1,7 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
         <title>Find your film</title>
         <link rel="stylesheet" href="index.css">
     </head>
@@ -9,12 +11,15 @@
             <h6><a href="watchlist.html">My Watchlist</a></h6>
         </section>
         <form class="searchForm" action="#">
-            <input type="text" placeholder="Search for a movie" name="search">
-            <button type="submit">Search<i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search for a movie" name="search" id="searchField">
+            <button type="submit" id="searchBtn">Search<i class="fa fa-search"></i></button>
         </form>
         <section id="feed">
-            <img src="/images/feed-icon.png">
-            <h1>Start Exploring</h1>
+            <div class="init-state">
+                <img id="init-state-img" src="/images/feed-icon.png">
+                <h1>Start Exploring</h1>
+            </div>
+        </div>
         </section>
         <script src="index.js" type="module"></script>
     </body>
