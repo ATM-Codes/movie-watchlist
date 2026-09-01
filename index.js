@@ -104,8 +104,11 @@ function watchListGenerator(movies){
    if(movies.length === 0){
       watchListFeedSection.innerHTML=`
       <div class="empty-state">
-         <img id="empty-state-img" src="/images/feed-icon.png">
-         <h1>It's empty, start adding your favorites!</h1>
+         <h1>Your watchlist is looking empty....</h1>
+            <a class="watchlist-link-btn" href="index.html">
+               <img src="images/watchlist-add.png" alt="Add">
+               <h4>Let's add some movies!</h4>
+            </a>
       </div>`
    }else{
       movies.forEach(function(movie) {

@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <title>Find your film</title>
         <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <section id="header">
@@ -11,8 +13,11 @@
             <h6><a href="watchlist.html">My Watchlist</a></h6>
         </section>
         <form class="searchForm" action="#">
-            <input type="text" placeholder="Search for a movie" name="search" id="searchField">
-            <button type="submit" id="searchBtn">Search<i class="fa fa-search"></i></button>
+            <div class="input-wrapper">
+                <i class="fa fa-search search-icon"></i>
+                <input type="text" placeholder="Search for a movie" name="search" id="searchField">
+            </div>
+            <button type="submit" id="searchBtn">Search</button>
         </form>
         <section id="feed">
             <div class="init-state">

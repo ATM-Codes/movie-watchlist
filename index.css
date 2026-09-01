@@ -10,6 +10,7 @@ html, body {
     flex-direction: column; 
     align-items: center;
     width: 100vw;
+    height: auto;
 }
 
 *{
@@ -29,8 +30,9 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 90vw;
-    margin-bottom: -2rem;
+
 }
+
 
 #feed{
     display: flex;
@@ -38,14 +40,13 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 60vw;
+    height: auto;
     margin: 0;
     color: #DFDDDD;
     padding-top: 5%;
+    
 }
 
-/* #feed img{
-    width: 10%;
-} */
 
 #header a{
     color: white;
@@ -57,23 +58,58 @@ html, body {
   flex-direction: row;
   justify-content: flex-start; /* Lines items up side-by-side with no artificial spacing */
   align-items: center;
-  width: 50vw;
-  height: 10vh;
+  width: 90%;
+  height: 8vh;
   box-sizing: border-box;
+  margin-top: -1.5rem;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding-left: 1rem; /* Creates clean spacing before the icon */
+}
+
+.search-icon {
+    color: #9CA3AF; 
+    margin-right: 0.5rem; /* Pushes the input text slightly away from the magnifying glass */
 }
 
 form.searchForm input[type=text]{
-    width: 80%;
+    width: 100%;
     height: 100%;
-    margin: 0px;
-    border-radius: 5px 0px 0px 5px;
-    border: 1px solid #D1D5DB;
+    border: none;
+    background: transparent;
+    outline: none; /* Prevents an ugly double border when clicked */
     font-size: 0.9rem;
-    padding-left: 1rem;
     color: #6B7280;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    padding-left: 0; /* Clear previous padding since wrapper handles it */
 }
+/* 
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.input-icons i {
+    position: absolute;
+}
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+} */
 
 form.searchForm button{
     width: 20%;
@@ -82,7 +118,7 @@ form.searchForm button{
     border-radius: 0px 5px 5px 0px;
     border: 1px solid #D1D5DB;
     background-color: #F9FAFB;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.9rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -102,6 +138,24 @@ form.searchForm button::after{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.empty-state h1, h4{
+    text-align: center;
+}
+
+.empty-state{
+    width: 30rem;
+}
+
+.init-state h1, .empty-state h1{
+    font-size: 1.5rem;
+}
+
+#init-state-img{
+    width: 8rem;
+    height: auto;
 }
 
 /*MOVIE CARD*/
@@ -112,7 +166,7 @@ form.searchForm button::after{
     margin: 10px;
     justify-content: space-between;
     border-bottom: 3px solid #DEDEDE;
-    width: 100%;
+    width: 80vw;
     background-color: white; /* for testing*/
     padding-bottom: 2em;
 }
@@ -125,8 +179,8 @@ form.searchForm button::after{
 } 
 
 .movie-poster img{
-  width: 10vw;
-  height: 32vh;
+  width: 10rem;
+  height: auto;
 }
 
 .movie-description{
@@ -169,10 +223,7 @@ form.searchForm button::after{
     color: gray;
 }
 
-.watchlist-btn-add img, .watchlist-btn-remove img{
-    width: 12%;
-    height: 12%;
-}
+
 
 .watchlist-btn-add, .watchlist-btn-remove {
     background: transparent;
@@ -188,6 +239,32 @@ form.searchForm button::after{
     width: 20%;
 }
 
+.watchlist-link-btn{
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 70%;
+    color: black;
+    text-decoration: none;
+}
+
+.watchlist-link-btn img{
+    width: 1rem;
+    height: auto;
+}
+
+.watchlist-btn-add img, .watchlist-btn-remove img{
+    width: 12%;
+    height: 12%;
+}
+
 .watchlist-btn-add:hover, .watchlist-btn-remove:hover {
     opacity: 0.7; /* Gives the user a visual response on hover */
 }
@@ -199,7 +276,101 @@ form.searchForm button::after{
     justify-content: center;
     align-items: center;
     width: 60vw;
+    height: 100%;
     margin: 0;
     color: #DFDDDD;
     padding-top: 5%;
+}
+
+/*RESPONSIVE DESIGN*/
+@media(max-width: 800px) {
+    #header{
+        padding: 2rem 3rem 2rem 3rem ;
+        font-size: 1.2rem;
+        color: white;   
+        justify-content: space-between;
+    }
+
+    .searchForm{
+    width: 90%;
+    height: 5vh;
+    box-sizing: border-box;
+    }
+
+form.searchForm input[type=text]{
+    width: 100%;
+
+}
+
+form.searchForm button{
+    width: 40%;
+    height: 100%;
+}
+
+.init-state h1{
+    font-size: 1.5rem;
+}
+
+#feed, #watchlist-feed{
+    width: 80%;
+    height: 100%;
+}
+
+
+.movie-poster img{
+  width: 15vw;
+  height: auto;
+}
+
+ .movie_card{
+
+    justify-content: space-around;
+}
+
+.movie-plot{
+    font-size: 80%;
+}
+
+.movie-details-line p{
+    font-size: 80%;
+    
+}
+.watchlist-btn-add, .watchlist-btn-remove {
+    font-size: 80%;
+}
+
+.watchlist-link-btn{
+
+    font-size: 1rem;
+}
+
+.watchlist-link-btn img{
+    width: 5%;
+    height: 5%;
+}
+
+.watchlist-btn-add img, .watchlist-btn-remove img{
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.init-state{
+    align-items: center;
+    justify-content: center;
+}
+.init-state h1{
+    font-size: 90%;
+}
+
+#init-state-img{
+    width: 50%;
+}
+
+.empty-state img{
+    width: 1rem;
+}
+
+.empty-state{
+    width: 100%;
+}
 }
