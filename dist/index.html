@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Find your film</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="module" crossorigin src="/assets/index-B01p2TD4.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-D6Gg7uiW.css">
+    </head>
+    <body>
+        <section id="header">
+            <h1>Find Your Film</h1>
+            <h6><a href="watchlist.html">My Watchlist</a></h6>
+        </section>
+        <form class="searchForm" action="#">
+            <div class="input-wrapper">
+                <i class="fa fa-search search-icon"></i>
+                <input type="text" placeholder="Search for a movie" name="search" id="searchField">
+            </div>
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+        <section id="feed">
+            <div class="init-state">
+                <img id="init-state-img" src="data:image/png;base64,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">
+                <h1>Start Exploring</h1>
+            </div>
+        </div>
+        </section>
+    </body>
+</html>
