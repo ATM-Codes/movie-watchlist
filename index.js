@@ -60,7 +60,7 @@ function feedGenerator(movies) {
    if(searchField && searchField.value === ""){
       feedSection.innerHTML=`
          <div class="init-state">
-                <img id="init-state-img" src="public/images/feed-icon.png">
+                <img id="init-state-img" src="/images/feed-icon.png">
                 <h1>Start Exploring</h1>
          </div>`
    }else{
@@ -72,7 +72,7 @@ function feedGenerator(movies) {
                     <div class="title-rating">
                         <h2 style="font-weight: 600;">${movie.Title}</h2>
                         <div class="rating">
-                            <img src="public/images/star.png">
+                            <img src="/images/star.png">
                             <p>${movie.imdbRating}</p>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ function feedGenerator(movies) {
                         <p class="duration">${movie.Runtime}</p>
                         <p class="genres">${movie.Genre}</p>
                         <button class="watchlist-btn-add" data-id="${movie.imdbID}">
-                           <img src="public/images/watchlist-add.png" alt="Add">
+                           <img src="/images/watchlist-add.png" alt="Add">
                            <span>Watchlist</span>
                         </button>
                     </div>
@@ -106,7 +106,7 @@ function watchListGenerator(movies){
       <div class="empty-state">
          <h1>Your watchlist is looking empty....</h1>
             <a class="watchlist-link-btn" href="index.html">
-               <img src="public/images/watchlist-add.png" alt="Add">
+               <img src="/images/watchlist-add.png" alt="Add">
                <h4>Let's add some movies!</h4>
             </a>
       </div>`
@@ -119,7 +119,7 @@ function watchListGenerator(movies){
                     <div class="title-rating">
                         <h2 style="font-weight: 600;">${movie.Title}</h2>
                         <div class="rating">
-                            <img src="public/images/star.png">
+                            <img src="/images/star.png">
                             <p>${movie.imdbRating}</p>
                         </div>
                     </div>
@@ -127,7 +127,7 @@ function watchListGenerator(movies){
                         <p class="duration">${movie.Runtime}</p>
                         <p class="genres">${movie.Genre}</p>
                         <button class="watchlist-btn-remove" data-id="${movie.imdbID}">
-                           <img src="public/images/watchlist-remove.png" alt="remove">
+                           <img src="/images/watchlist-remove.png" alt="remove">
                            <span>Remove</span>
                         </button>
                     </div>
