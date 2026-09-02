@@ -60,7 +60,7 @@ function feedGenerator(movies) {
    if(searchField && searchField.value === ""){
       feedSection.innerHTML=`
          <div class="init-state">
-                <img id="init-state-img" src="/images/feed-icon.png">
+                <img id="init-state-img" src="./images/feed-icon.png">
                 <h1>Start Exploring</h1>
          </div>`
    }else{
@@ -72,7 +72,7 @@ function feedGenerator(movies) {
                     <div class="title-rating">
                         <h2 style="font-weight: 600;">${movie.Title}</h2>
                         <div class="rating">
-                            <img src="images/star.png">
+                            <img src="./images/star.png">
                             <p>${movie.imdbRating}</p>
                         </div>
                     </div>
