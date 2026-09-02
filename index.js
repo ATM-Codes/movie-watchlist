@@ -12,7 +12,7 @@ let watchList = JSON.parse(localStorage.getItem("myWatchList")) || []
 async function retrieveMovies(searchText){
 
       let cleanStr = searchText.replace('"','')
-      const res= await fetch(`http://www.omdbapi.com/?s=${cleanStr}&apikey=51a01f27`)
+      const res= await fetch(`https://www.omdbapi.com/?s=${cleanStr}&apikey=51a01f27`)
       const data = await res.json()
       console.log(data)
       movieResults=await data.Search
@@ -29,7 +29,7 @@ async function retrieveMovies(searchText){
       }else{
             for(let movie of movieResults){
                id = movie.imdbID.replace('"','')
-               const res2= await fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=51a01f27`)
+               const res2= await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=51a01f27`)
                const data2 = await res2.json()
                
                finalMovieResults.push(data2)
@@ -147,7 +147,7 @@ if(feedSection){
       let id = e.target.closest('.watchlist-btn-add').dataset.id;
       console.log(id)
 
-      const res2= await fetch(`http://www.omdbapi.com/?i=${id}&apikey=51a01f27`)
+      const res2= await fetch(`https://www.omdbapi.com/?i=${id}&apikey=51a01f27`)
       const data2 = await res2.json()
                
       watchList.push(data2)
