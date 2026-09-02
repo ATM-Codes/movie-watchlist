@@ -1,7 +1,14 @@
-import {defineConfig} from "vite"
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
-	plugins: [
-		
-	]
+  build: {
+    rollupOptions: {
+      input: {
+        // Force Vite to recognize and compile BOTH HTML documents side-by-side
+        main: resolve(__dirname, 'index.html'),
+        watchlist: resolve(__dirname, 'watchlist.html'),
+      },
+    },
+  },
 })
